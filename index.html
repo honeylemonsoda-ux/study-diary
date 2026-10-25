@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5e6ef">
+<title>MY STUDY DIARY ♡</title>
+<style>
+:root{--ink:#49414c;--muted:#9b8d9e;--pink:#d6adca;--pink2:#f3dce9;--lilac:#e9e4f1;--line:#eee4ee;--paper:#fff;--bg:#f8f5f8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;color:var(--ink)}
+button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}
+.app{max-width:680px;margin:auto;padding:16px 14px 32px}
+.hero{background:linear-gradient(135deg,#f4dce8,#e7e3f0 65%,#fffafd);border:1px solid white;border-radius:24px;padding:22px 19px;box-shadow:0 5px 20px #8d758c12}
+.eyebrow{font-size:10px;letter-spacing:3px;color:#8b788e;font-weight:800}h1{font-size:27px;letter-spacing:-1px;margin:9px 0 4px}.sub{font-size:12px;color:#776c7c}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.pill{background:#ffffffb8;border-radius:20px;padding:6px 10px;font-size:10px}
+.datebar{display:flex;align-items:center;justify-content:space-between;gap:7px;margin:16px 0}.navbtn{width:38px;height:38px;flex-shrink:0;border:1px solid #e8dfe9;border-radius:12px;background:white;color:#79677f;font-size:20px}
+.datecenter{text-align:center;min-width:0;flex:1}.datecenter strong{display:block;font-size:15px}.datecenter small{color:#9b879c;font-size:10px;letter-spacing:.5px}
+.todaybtn,.toolbtn{background:#fff;border:1px solid #e8dce8;border-radius:10px;padding:9px 10px;font-size:11px;color:#8c758e;white-space:nowrap}
+.progressbox{background:#fff;border:1px solid var(--line);border-radius:20px;padding:17px;margin-bottom:15px}.progresshead{display:flex;justify-content:space-between;align-items:center;gap:8px}.progresshead strong{font-size:13px}.percent{font-size:30px;font-weight:900;color:#b77d9f;letter-spacing:-1px}
+.track{height:9px;background:#f0eaf0;border-radius:20px;overflow:hidden;margin:10px 0 8px}.fill{height:100%;width:0;background:linear-gradient(90deg,#d7b6d6,#edaccb);border-radius:20px;transition:width .25s}.muted{font-size:11px;color:var(--muted)}
+.encourage{margin-top:12px;padding:10px 12px;background:#faf4f9;border-radius:12px;color:#9b799c;font-size:11px}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:15px 0 9px}.tools strong{font-size:13px}.resetbtn{background:#fff;border:1px solid #f0dfe7;color:#b17d9b;border-radius:10px;padding:9px 10px;font-size:11px}
+.subject{background:#fff;border:1px solid var(--line);border-radius:19px;padding:14px;margin:11px 0;box-shadow:0 3px 10px #77617c08}.subjecthead{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sicon{width:40px;height:40px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}.sname{font-size:15px;font-weight:900}.scount{font-size:10px;color:#a394a4;margin-top:3px}.sright{margin-left:auto;text-align:right;font-size:11px;color:#a18ca1}
+.task{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px solid #f3eef3;min-width:0}.taskcheck{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1.5px solid #d9cbdc;border-radius:8px;background:#fff;flex-shrink:0;display:grid;place-items:center;margin:0}.taskcheck:checked{background:#d5b4d3;border-color:#d5b4d3}.taskcheck:checked:after{content:'✓';font-size:15px;color:white;font-weight:900}
+.taskname{font-size:13px;flex:1;min-width:0;overflow-wrap:anywhere;line-height:1.5}.task.done .taskname{text-decoration:line-through;color:#b4aab6}.actions{display:flex;gap:5px;flex-shrink:0}.mini{border:0;background:#f6f1f6;color:#98849a;border-radius:8px;width:30px;height:30px;font-size:14px}
+.addrow{display:flex;gap:7px;margin-top:9px}.addinput,.editinput{min-width:0;flex:1;width:0;border:1px solid #e9dfe9;background:#fcfafc;border-radius:11px;padding:11px;font-size:12px;outline:none;color:#49404b}.addinput:focus,.editinput:focus{border-color:#c9a7c9}.addbtn{border:0;border-radius:11px;background:#ead9e9;color:#775e7b;font-weight:800;padding:0 14px;font-size:12px}
+.empty{font-size:12px;color:#b1a5b2;padding:12px 0;text-align:center}.bottomnote{text-align:center;color:#a594a6;font-size:10px;padding:17px 0 5px;letter-spacing:1px}.hint{font-size:11px;line-height:1.7;color:#9b8d9e;padding:0 2px}
+@media(min-width:560px){.app{padding:24px}.subject{padding:17px}.hero{padding:25px}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="hero">
+<div class="eyebrow">✧ YOUR DAILY STUDY LOG ✧</div>
+<h1>MY STUDY DIARY ♡</h1><div class="sub">little steps, big dreams 🎀</div>
+<div class="pills"><span class="pill">♡ STUDY MODE</span><span class="pill">✧ Y2K GIRL</span></div>
+</header>
+<div class="datebar">
+<button class="navbtn" id="prevday" aria-label="前の日">‹</button>
+<div class="datecenter"><strong id="date-label">TODAY ♡</strong><small id="day-label"></small></div>
+<button class="todaybtn" id="todaybtn">今日に戻る</button>
+<button class="navbtn" id="nextday" aria-label="次の日">›</button>
+</div>
+<section class="progressbox">
+<div class="progresshead"><strong>今日の達成率 ♡</strong><span class="percent" id="percent">0%</span></div>
+<div class="track"><div class="fill" id="progress-fill"></div></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span class="muted" id="task-count">0 / 10 tasks completed</span><span class="muted" id="remaining">あと10個！</span></div>
+<div class="encourage" id="encourage">♡ ひとつずつ進めよう！</div>
+</section>
+<div class="tools"><strong>✧ TODAY'S TO-DO</strong><button class="toolbtn" id="clearchecks">チェックを全解除</button></div>
+<div id="subjects"></div>
+<div class="tools" style="margin-top:18px"><strong>♡ PLAN SETTINGS</strong><button class="resetbtn" id="copyyesterday">前日の予定をコピー</button></div>
+<div class="hint">日付を切り替えて、日ごとの予定を管理できるよ。予定はこのブラウザ内に自動保存されるよ。</div>
+<div class="bottomnote">MADE WITH ♡ FOR YOUR DREAM CAMPUS</div>
+</main>
+<script>
+(()=>{
+const subjects=[
+{id:'modern',name:'現代文',icon:'📖',color:'#f4e4eb',tasks:['問題集']},
+{id:'classic',name:'古典',icon:'🎀',color:'#eee4f4',tasks:['問題集①','問題集②','単語帳']},
+{id:'history',name:'日本史',icon:'🏯',color:'#e4e9f3',tasks:['教科書','坂本プリント','問題集']},
+{id:'english',name:'英語',icon:'💌',color:'#f7e9e1',tasks:['ターゲット1900','過去問']}
+];
+const STORE='myStudyDiaryY2K_v1';let all={};
+try{all=JSON.parse(localStorage.getItem(STORE)||'{}')||{}}catch(e){}
+const localDate=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const shift=(key,n)=>{let d=new Date(key+'T12:00:00');d.setDate(d.getDate()+n);return localDate(d)};
+let dayKey=localDate(new Date());
+const starter=()=>{let o={};subjects.forEach(s=>o[s.id]=s.tasks.map((name,i)=>({id:s.id+'-'+i+'-'+Math.random().toString(36).slice(2,7),name,done:false})));return o};
+function save(){try{localStorage.setItem(STORE,JSON.stringify(all))}catch(e){alert('保存できませんでした。ブラウザの設定をご確認ください。')}}
+function data(){if(!all[dayKey])all[dayKey]=starter();subjects.forEach(s=>{if(!all[dayKey][s.id])all[dayKey][s.id]=[]});return all[dayKey]}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){
+const d=data(),date=new Date(dayKey+'T12:00:00');
+document.getElementById('date-label').textContent=dayKey===localDate(new Date())?'TODAY ♡':(date.getMonth()+1)+'/'+date.getDate();
+document.getElementById('day-label').textContent=date.toLocaleDateString('ja-JP',{year:'numeric',month:'long',day:'numeric',weekday:'short'})+' の予定';
+let total=0,done=0;subjects.forEach(s=>d[s.id].forEach(t=>{total++;if(t.done)done++}));
+const pct=total?Math.round(done/total*100):0;
+document.getElementById('percent').textContent=pct+'%';document.getElementById('progress-fill').style.width=pct+'%';
+document.getElementById('task-count').textContent=done+' / '+total+' tasks completed';
+document.getElementById('remaining').textContent=total===done?'全部完了！🎉':'あと'+(total-done)+'個！';
+document.getElementById('encourage').textContent=total===0?'♡ まずは今日やることを追加しよう！':pct===100?'🎀 ALL DONE! 今日もよく頑張ったね ♡':pct>=70?'✧ すごい！ゴールまであと少し！':pct>=30?'♡ いい調子！このまま進もう！':'♡ 焦らずひとつずつ進めよう！';
+const container=document.getElementById('subjects');container.innerHTML='';
+subjects.forEach(s=>{
+const list=d[s.id],card=document.createElement('section');card.className='subject';
+card.innerHTML='<div class="subjecthead"><div class="sicon" style="background:'+s.color+'">'+s.icon+'</div><div><div class="sname">'+s.name+'</div><div class="scount">'+list.filter(t=>t.done).length+' / '+list.length+' completed</div></div><div class="sright">'+(list.length&&list.every(t=>t.done)?'♡ DONE':'TO-DO')+'</div></div><div class="tasklist"></div><form class="addrow"><input class="addinput" maxlength="100" placeholder="'+s.name+'の勉強を追加…" aria-label="'+s.name+'の勉強を追加"><button class="addbtn" type="submit">＋ 追加</button></form>';
+const tl=card.querySelector('.tasklist');
+if(!list.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='まだ予定がないよ ♡';tl.appendChild(empty)}
+list.forEach(t=>{
+const row=document.createElement('div');row.className='task'+(t.done?' done':'');
+row.innerHTML='<input type="checkbox" class="taskcheck" aria-label="完了にする" '+(t.done?'checked':'')+'><span class="taskname">'+esc(t.name)+'</span><div class="actions"><button class="mini edit" type="button" aria-label="編集" title="編集">✎</button><button class="mini del" type="button" aria-label="削除" title="削除">×</button></div>';
+row.querySelector('.taskcheck').addEventListener('change',e=>{t.done=e.target.checked;save();render()});
+row.querySelector('.edit').addEventListener('click',()=>{
+const name=row.querySelector('.taskname'),input=document.createElement('input');input.className='editinput';input.maxLength=100;input.value=t.name;name.replaceWith(input);
+row.querySelector('.actions').innerHTML='<button class="mini saveedit" type="button" title="保存">✓</button><button class="mini canceledit" type="button" title="キャンセル">↶</button>';
+const finish=ok=>{if(ok&&input.value.trim())t.name=input.value.trim();save();render()};
+row.querySelector('.saveedit').onclick=()=>finish(true);row.querySelector('.canceledit').onclick=()=>finish(false);
+input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();finish(true)}if(e.key==='Escape')finish(false)});input.focus();input.select();
+});
+row.querySelector('.del').addEventListener('click',()=>{if(confirm('「'+t.name+'」を削除しますか？')){d[s.id]=d[s.id].filter(x=>x.id!==t.id);save();render()}});
+tl.appendChild(row);
+});
+card.querySelector('.addrow').addEventListener('submit',e=>{e.preventDefault();const input=card.querySelector('.addinput'),name=input.value.trim();if(!name){input.focus();return}d[s.id].push({id:'task-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),name,done:false});save();render()});
+container.appendChild(card);
+});
+save();
+}
+document.getElementById('prevday').onclick=()=>{dayKey=shift(dayKey,-1);render()};
+document.getElementById('nextday').onclick=()=>{dayKey=shift(dayKey,1);render()};
+document.getElementById('todaybtn').onclick=()=>{dayKey=localDate(new Date());if(!all[dayKey])all[dayKey]=starter();render()};
+document.getElementById('clearchecks').onclick=()=>{if(confirm('この日のチェックをすべて外しますか？')){subjects.forEach(s=>data()[s.id].forEach(t=>t.done=false));save();render()}};
+document.getElementById('copyyesterday').onclick=()=>{
+const prev=all[shift(dayKey,-1)];
+if(!prev){alert('前日の予定はまだないよ。前日に予定を登録してね！');return}
+if(!confirm('前日の予定をコピーしますか？今選択している日の予定は置き換わります。'))return;
+const copied={};subjects.forEach(s=>copied[s.id]=(prev[s.id]||[]).map(t=>({id:'copy-'+Date.now()+'-'+Math.random().toString(36).slice(2,7),name:t.name,done:false})));
+all[dayKey]=copied;save();render();
+};
+if(!all[dayKey])all[dayKey]=starter();render();
+})();
+</script>
+</body>
+</html>
